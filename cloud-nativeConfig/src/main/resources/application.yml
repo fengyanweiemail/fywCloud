@@ -1,0 +1,15 @@
+server:
+  port: 8000
+spring:
+  application:
+    name: nativeconfig
+  #读取本地配置文件,即配置文件的获取方式（本地/远程）本地
+  profiles:
+    active: native
+  #配置文件的获取路径
+  cloud:
+    config:
+      server:
+        native:
+          search-locations: classpath:/config
+

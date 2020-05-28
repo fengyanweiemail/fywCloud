@@ -1,0 +1,20 @@
+server:
+  port: 0000
+spring:
+  application:
+    name: gitConfig
+  cloud:
+    config:
+      server:
+        git:
+          uri: #git的配置地址
+          search-paths: configGit   #哪个文件夹下的
+          username: #登录git的账号和密码
+          password:
+      label: master #从哪个分支读取
+eureka:
+  client:
+    service-url:
+      defaultZone: http://lcoalhost:8761/eureka
+  instance:
+    prefer-ip-address: true

@@ -1,0 +1,16 @@
+#服务端口号
+server:
+  port: 8010
+#服务名称-提供者在注册中心的名字，方便后面集群中使用
+spring:
+  application:
+    name: provider
+#注册中心的访问路径
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+  #是否将此ip显示的到注册中心(为什么false也将ip注册进去了？？？)
+  instance:
+    prefer-ip-address: true
+

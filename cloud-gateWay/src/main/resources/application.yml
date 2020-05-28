@@ -1,0 +1,16 @@
+server:
+  port: 8050
+spring:
+  application:
+    name: gateWay
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+  instance:
+    prefer-ip-address: true
+    #网关统一入口配置
+zuul:
+  routes:
+    #服务提供者/或则消费者（按理来说可以使用与消费者）的application名字--/用来映射服务提供者的具体提供者是哪个
+    consumer: /p/**

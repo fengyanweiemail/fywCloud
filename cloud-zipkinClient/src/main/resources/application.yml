@@ -1,0 +1,21 @@
+server:
+  port: 9900
+spring:
+  application:
+    name: zipkin
+    enabled:
+  #zipkin只负责展示，sleuth才负责数据监控跟踪，启用sleuth
+  sleuth:
+    web:
+      client:
+        enabled: true
+    #设置追踪数据的采样比例，默认100%？？？
+    sampler:
+      probability: 1.0
+  #zipkin服务的地址
+  zipkin:
+    base-url: http://localhost:8989
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/

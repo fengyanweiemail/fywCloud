@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>fyw-cloud</groupId>
+    <artifactId>fywCloud</artifactId>
+    <packaging>pom</packaging>
+    <version>1.0-SNAPSHOT</version>
+    <modules>
+        <module>cloud-eureka</module>
+        <module>cloud-client</module>
+        <module>cloud-consumer</module>
+        <module>cloud-restTemplate</module>
+        <module>cloud-gateWay</module>
+        <module>cloud-consumerFeign</module>
+        <module>hystrix</module>
+        <module>cloud-nativeConfig</module>
+        <module>cloud-nativeConfigClient</module>
+        <module>cloud-configServerGit</module>
+        <module>cloud-configClientGit</module>
+        <module>cloud-zipkin</module>
+        <module>cloud-zipkinClient</module>
+    </modules>
+    <!--引入springboot父类-子类公用jar-->
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.0.2.RELEASE</version>
+    </parent>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.18.4</version>
+            <scope>provided</scope>
+        </dependency>
+
+    </dependencies>
+    <!--引入springcloud父类，并统一管理子类pom-->
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-dependencies</artifactId>
+                <version>Finchley.RELEASE</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+</project>

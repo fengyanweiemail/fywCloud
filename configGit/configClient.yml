@@ -1,0 +1,6 @@
+#这不是一个module，只是一个配置文件夹，用来传到远程git上
+server:
+  port: 9999
+spring:
+  application:
+    name: configClient

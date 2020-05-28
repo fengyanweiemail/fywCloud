@@ -1,0 +1,14 @@
+package com.fyw;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+/**
+ * Created by fyw on 2019/8/3.
+ */
+@SpringBootApplication
+public class ConfigClientGitApplication {
+    public static void main(String[] args) {
+        SpringApplication.run(ConfigClientGitApplication.class, args);
+    }
+}

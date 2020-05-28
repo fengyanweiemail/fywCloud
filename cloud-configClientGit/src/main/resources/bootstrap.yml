@@ -1,0 +1,10 @@
+spring:
+  cloud:
+    config:
+      name: configClient #与git上配置文件夹下面的所要找的配置文件名称一样，是否必须是注册中心服务的名字，个人感觉不是，到时候可以试试
+      label: master #git.repository 的分支
+      discovery:
+        enabled: true #是否开启注册中心服务发现支持
+        service-id: gitConfig # 配置中心在eureka上的注册服务名
+  application:
+    name: aaaaa

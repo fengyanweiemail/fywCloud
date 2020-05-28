@@ -1,0 +1,3 @@
+server:
+  port: 8111
+foo: foo version 1
